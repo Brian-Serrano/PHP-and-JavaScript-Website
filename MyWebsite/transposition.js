@@ -1,5 +1,3 @@
-const plain = document.querySelector('#plain');
-
 function findTransposition(plain1){
     const plain2 = plain1.split(' ');
     const plain4 = plain2.join('').toUpperCase();
@@ -15,6 +13,6 @@ function findTransposition(plain1){
 }
 
 function Transposition(){
-    const plain1 = plain.value;
+    const plain1 = document.getElementById('plain').value;
 	document.getElementById("demo").value = findTransposition(plain1);
 }

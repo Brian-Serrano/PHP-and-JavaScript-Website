@@ -13,7 +13,7 @@
 			<?php include 'calculatoraside.php'; ?>
 			<div class="article">
 				<h1>Combination Calculator</h1><hr>
-				<p>Combination is a selection of objects from a collection in any order as oppose to permutations which deal with the ordered arrangements of objects. In a combination in which r objects can be selected from a set of n objects, the selection rules are: the order of selection does not matter (the same objects selected in different orders are regarded as the same combination); each object can be selected only once; this implies that you are not allowed any repeat numbers.</p><hr>
+				<p>Our online combination calculator allows you to quickly and easily determine the number of combinations for a given set of items. A combination is a selection of items in which the order does not matter, and our calculator can help you determine how many different combinations are possible for a given set of items. Simply enter the number of items and the calculator will automatically compute the total number of combinations. This tool is useful for probability and statistics problems, as well as for generating unique groupings of items. Try it out now and see how many combinations are possible for your set of items!</p><hr>
 				<h2>Enter the numbers:</h2>
 				<input type = "text" id = "n" class = "input" placeholder="N...">
 				<p>Number of objects to choose from:</p>

@@ -13,7 +13,7 @@
 			<?php include 'calculatoraside.php'; ?>
 			<div class="article">
 				<h1>Permutation Calculator</h1><hr>
-				<p>Permutation is a counting technique which refers to the arrangement (or ordering) of a set of objects, from first to last, where the order in which the objects are selected does matter. In a permutation n different objects taken r at a time (where r is a subset of n), an event cannot repeat.</p><hr>
+				<p>Our online permutation calculator allows you to quickly and easily determine the number of permutations for a given set of items. A permutation is an arrangement of items in a specific order, and our calculator can help you determine how many different permutations are possible for a given set of items. Simply enter the number of items and the calculator will automatically compute the total number of permutations. This tool is useful for probability and statistics problems, as well as for generating unique combinations of items. Try it out now and see how many permutations are possible for your set of items!</p><hr>
 				<h2>Enter the numbers:</h2>
 				<input type = "text" id = "n" class = "input" placeholder="N...">
 				<p>Number of objects to choose from:</p>

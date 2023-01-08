@@ -12,8 +12,8 @@
 		<div class="main">
 			<?php include 'calculatoraside.php'; ?>
 			<div class="article">
-				<h1>Quadratic Equation</h1><hr>
-				<p>A quadratic equation is a second order equation written as ax2 + bx + c = 0 where a, b, and c are coefficients of real numbers and a ≠ 0.</p><hr>
+				<h1>Quadratic Equation Calculator</h1><hr>
+				<p>Our online quadratic equation calculator allows you to quickly and easily solve quadratic equations of the form ax^2 + bx + c = 0. A quadratic equation is a second-order polynomial equation that can be solved using the quadratic formula: x = (-b +/- sqrt(b^2 - 4ac)) / (2a). Simply enter the values of a, b, and c, and the calculator will automatically generate the solutions for x. If the equation has no real solutions, the calculator will inform you that the equation has no real roots. This tool is useful for anyone studying algebra or working with quadratic equations. Try it out now and see how easy it is to solve quadratic equations!</p><hr>
 				<h2>Enter 3 numbers:</h2>
                 <div class="section">
                     <div class="sect">

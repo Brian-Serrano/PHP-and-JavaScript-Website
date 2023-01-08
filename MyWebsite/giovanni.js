@@ -1,8 +1,3 @@
-const cha = document.querySelector('#cha');
-const shift = document.querySelector('#shift');
-const key = document.querySelector('#key');
-const plain = document.querySelector('#plain');
-
 function findGiovanni(cha1, shift3, key1, plain1){
     const cha3 = cha1.toUpperCase();
     const cha2 = cha3.split('');
@@ -51,9 +46,9 @@ function findGiovanni(cha1, shift3, key1, plain1){
 }
 
 function Giovanni(){
-    const cha1 = cha.value;
-    const shift3 = shift.value;
-    const key1 = key.value;
-    const plain1 = plain.value;
+    const cha1 = document.getElementById('cha').value;
+    const shift3 = document.getElementById('shift').value;
+    const key1 = document.getElementById('key').value;
+    const plain1 = document.getElementById('plain').value;
 	document.getElementById("demo").value = findGiovanni(cha1, shift3, key1, plain1);
 }

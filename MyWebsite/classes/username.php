@@ -10,44 +10,33 @@ class username extends database {
         $this->NewUser = $NewUser;
     }
     public function noInput(){
-        $result = null;
-        if(empty($this->ConUser) || empty($this->NewUser)){
-            $result = false;
-        } else {
-            $result = true;
-        }
-        return $result;
+        return empty($this->ConUser) || empty($this->NewUser);
     }
     public function invalidUser(){
-        $result = null;
-        if(!preg_match("/^[a-zA-Z0-9]{7,20}$/", $this->NewUser)){
-            $result = false;
-        } else {
-            $result = true;
-        }
-        return $result;
+        return !preg_match("/^[a-zA-Z0-9]{7,20}$/", $this->NewUser);
     }
     public function userMatch(){
-        $result = null;
-        if($this->ConUser != $_SESSION['user']){
-            $result = false;
-        } else {
-            $result = true;
-        }
-        return $result;
+        return $this->ConUser != $_SESSION['user'];
+    }
+    public function length(){
+        return strlen($this->ConUser) < 7 || strlen($this->ConUser) > 20 || strlen($this->NewUser) < 7 || strlen($this->NewUser) > 20;
     }
     public function updateUser(){
 
-        if($this->noInput() == false){
+        if($this->noInput()){
             header('location:updateusername.php?update=noinput');
             exit();
         }
-        if($this->invalidUser() == false){
+        if($this->invalidUser()){
             header('location:updateusername.php?update=invaliduser');
             exit();
         }
-        if($this->userMatch() == false){
+        if($this->userMatch()){
             header('location:updateusername.php?update=usernamedoesntmatch');
+            exit();
+        }
+        if($this->length()){
+            header('location:updateusername.php?update=invalidlength');
             exit();
         }
         $this->queryUser($this->ConUser, $this->NewUser);

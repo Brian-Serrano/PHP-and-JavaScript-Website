@@ -1,5 +1,3 @@
-const inf = document.querySelector('#infix');
-
 function convertToPostfix(infix) {
     var output = "";
     var stack = [];
@@ -42,6 +40,6 @@ function getPrecedence(ch) {
     }
 }
 function Infix(){
-	const infix = inf.value;
+	const infix = document.getElementById('infix').value;
 	document.getElementById("demo").value = convertToPostfix(infix);
 }

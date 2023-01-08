@@ -1,6 +1,3 @@
-const n = document.querySelector('#n');
-const r = document.querySelector('#r');
-
 function getComb(n1, r1) {
 	var fact = 1;
 	var fact2 = 1;
@@ -13,7 +10,7 @@ function getComb(n1, r1) {
 	return fact/fact2;
 }
 function Comb(){
-	const n1 = n.value;
-	const r1 = r.value;
+	const n1 = document.getElementById('n').value;
+	const r1 = document.getElementById('r').value;
 	document.getElementById("demo").value = getComb(n1, r1);
 }

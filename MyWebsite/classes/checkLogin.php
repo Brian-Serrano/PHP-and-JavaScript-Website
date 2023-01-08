@@ -18,10 +18,10 @@ class checkLogin extends database {
         $hashedPwd = mysqli_fetch_assoc($query_run);
         $checkPwd = password_verify($pwd, $hashedPwd['pass']);
 
-        if ($checkPwd == false){
+        if (!$checkPwd){
             header('location:login.php?login=wrongpassword');
             exit();
-        } else if ($checkPwd == true){
+        } else if ($checkPwd){
             session_start();
             $query2 = "SELECT id FROM users WHERE username = '$user';";
             $query_run2 = mysqli_query($this->connect(), $query2);

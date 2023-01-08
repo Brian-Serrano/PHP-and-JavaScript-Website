@@ -21,9 +21,9 @@ if (isset($_SESSION["id"])){
                 <h1>Change Password</h1>
                 <form action="updatepassword.php" method="post">
                     <p>Confirm Password:</p>
-                    <input type = "password" name = "ConPwd" id = "toggle1" class = "input" placeholder="Confirm Password here..."><br>
+                    <input type = "password" name = "ConPwd" id = "toggle1" class = "input" placeholder="Confirm Password here..." maxlength="20" minlength="7" required><br>
                     <p>New Password:</p>
-                    <input type = "password" name = "NewPwd" id = "toggle2" class = "input" placeholder="New Password here..."><br>
+                    <input type = "password" name = "NewPwd" id = "toggle2" class = "input" placeholder="New Password here..." maxlength="20" minlength="7" required><br>
 					<h5>Password must be at least 7 characters and not greater than 20 characters<br>and must include at least one uppercase letter, number and special character</h5><br><br><br>
 					<a onclick="myFunc()" class="hsp">Hide/Show Password</a><br><br><br><br>
                     <button class="button-15" role="button" name="SetPwd" type="submit">Change Password</button><br><br>
@@ -58,16 +58,19 @@ if (isset($_SESSION["id"])){
                     }
 
                     $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-					if(strpos($url, "update=noinput") == true){ 
+					if(strpos($url, "update=noinput")){ 
 						echo "<p>You did not input</p>";
 					}
-					if(strpos($url, "update=invalidpassword") == true){ 
+					if(strpos($url, "update=invalidpassword")){ 
 						echo "<p>Please enter valid password</p>";
 					}
-					if(strpos($url, "error=queryfailed") == true){ 
+					if(strpos($url, "update=invalidlength")){ 
+						echo "<p>Enter specified length</p>";
+					}
+					if(strpos($url, "error=queryfailed")){ 
 						echo "<p>An error occured</p>";
 					}
-					if(strpos($url, "update=passworddoesntmatch") == true){ 
+					if(strpos($url, "update=passworddoesntmatch")){ 
 						echo "<p>Password doesnt match</p>";
 					}
                 ?>

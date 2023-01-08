@@ -12,8 +12,8 @@
 		<div class="main">
 			<?php include 'calculatoraside.php'; ?>
 			<div class="article">
-				<h1>Least Common Multiple</h1><hr>
-				<p>LCM is the short form for “Least Common Multiple.” The least common multiple is defined as the smallest multiple that two or more numbers have in common. For example: Take two integers, 2 and 3. Multiples of 2: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20…. Multiples of 3: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ….</p><hr>
+				<h1>Least Common Multiple Calculator</h1><hr>
+				<p>Our online least common multiple (LCM) calculator allows you to quickly and easily find the LCM of two or more numbers. The least common multiple is the smallest positive integer that is a multiple of two or more numbers. It is a useful concept in mathematics and has numerous applications, including in solving problems involving fractions and in finding the greatest common divisor (GCD). Simply enter the numbers for which you want to find the LCM and the calculator will automatically compute the result. This tool is useful for anyone studying mathematics or working with fractions. Try it out now and see how easy it is to find the least common multiple of any set of numbers!</p><hr>
 				<h2>Enter numbers seperated by space:</h2>
 				<input type = "text" id = "lcm" class = "input" placeholder="Numbers here..."><br><br>
 				<button onclick="LCM()" class="button-15" role="button">Submit</button><br><br>

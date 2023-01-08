@@ -1,7 +1,7 @@
-const dec = document.querySelector('#dec');
-const bin = document.querySelector('#bin');
-const oct = document.querySelector('#oct');
-const hex = document.querySelector('#hex');
+const dec = document.getElementById('dec');
+const bin = document.getElementById('bin');
+const oct = document.getElementById('oct');
+const hex = document.getElementById('hex');
 
 function Dec(){
     const b = parseInt(dec.value).toString(2);

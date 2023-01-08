@@ -13,7 +13,7 @@
 			<?php include 'encryptionaside.php'; ?>
 			<div class="article">
 				<h1>Caesar Cipher Encryption</h1><hr>
-				<p>It is one of the earliest known and simplest ciphers. It is a type of substitution cipher in which each letter in the plaintext is shifted to a certain number of places down the alphabet. For example, with a shift of 1, A would be replaced by B, B would become C, and so on. This method is named after Julius Caesar who used to communicate with his generals.</p><hr>
+				<p>Our online Caesar cipher encryptor allows you to easily encrypt your text using the Caesar cipher method. The Caesar cipher is a simple substitution cipher that replaces each letter of the plaintext with a letter that is a fixed number of positions down the alphabet. Simply enter your plaintext and the key (the number of positions to shift the letters), and the encryptor will generate the encrypted text. The Caesar cipher is not a very secure method of encryption, as it can be easily broken using frequency analysis, but it is a good tool for learning about substitution ciphers and encryption in general. Try it out now and see how easy it is to encrypt your text using the Caesar cipher method!</p><hr>
 				<h2>Enter values on fields:</h2>
 				<input type = "text" id = "cha" class = "input" value="abcdefghijklmnopqrstuvwxyz">
 				<p>Characters:</p>

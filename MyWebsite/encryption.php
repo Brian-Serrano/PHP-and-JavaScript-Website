@@ -20,10 +20,10 @@
 				}
 				?>
 				<hr>
-				<p><a href="caesar.php">Caesar Cipher</a>. It is one of the earliest known and simplest ciphers. It is a type of substitution cipher in which each letter in the plaintext is shifted...</p>
-				<p><a href="keyword.php">Keyword Cipher</a>. To use this method for constructing the ciphertext alphabet, pick a keyword and write it down while ignoring the repeated letters...</p>
-				<p><a href="giovanni.php">Giovanni Cipher</a>. Around 1580, Giovanni Battista Argenti suggested that one can also pick a keyletter and begin the keyword UNDER that letter of the...</p>
-				<p><a href="transposition.php">Transposition Cipher</a>. A transposition cipher is archived by performing some permutation on the plaintext letters. The simplest such cipher is the rail...</p>
+				<h2><a href="caesar.php">Caesar Cipher</a></h2>
+				<h2><a href="keyword.php">Keyword Cipher</a></h2>
+				<h2><a href="giovanni.php">Giovanni Cipher</a></h2>
+				<h2><a href="transposition.php">Transposition Cipher</a></h2>
 			</div>
 			<?php include 'recommendationaside.php'; ?>
 		</div>

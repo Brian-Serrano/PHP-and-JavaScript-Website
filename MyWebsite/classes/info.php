@@ -8,17 +8,18 @@ class info extends database {
         $this->info = $info;
     }
     public function noInput(){
-        $result = null;
-        if(empty($this->info)){
-            $result = false;
-        } else {
-            $result = true;
-        }
-        return $result;
+        return empty($this->info);
+    }
+    public function length(){
+        return strlen($this->info) < 30 || strlen($this->info) > 200;
     }
     public function setInfo(){
-        if($this->noInput() == false){
+        if($this->noInput()){
             header('location:myaccount.php?info=noinput');
+            exit();
+        }
+        if($this->length()){
+            header('location:myaccount.php?info=invalidlength');
             exit();
         }
         $this->queryInfo($this->info);

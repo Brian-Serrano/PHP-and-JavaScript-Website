@@ -12,8 +12,8 @@
 		<div class="main">
 			<?php include 'calculatoraside.php'; ?>
 			<div class="article">
-				<h1>Infix to Postfix</h1><hr>
-				<p>Infix expression is an expression in which the operator is in the middle of operands, like operand operator operand. Postfix expression is an expression in which the operator is after operands, like operand operator. Postfix expressions are easily computed by the system but are not human readable.</p><hr>
+				<h1>Infix to Postfix Converter</h1><hr>
+				<p>Our online infix to postfix converter allows you to quickly and easily convert an expression written in infix notation to postfix notation (also known as reverse polish notation). Infix notation is the most common way of writing mathematical and logical expressions, but postfix notation has several advantages, including the fact that it does not require the use of parentheses to specify the order of operations. Simply enter an expression in infix notation and the converter will generate the equivalent expression in postfix notation. This tool is useful for computer science and programming applications, where postfix notation is often used to evaluate expressions. Try it out now and see how easy it is to convert between infix and postfix notation!</p><hr>
 				<h2>Enter infix expression:</h2>
 				<input type = "text" id = "infix" class = "input" placeholder="infix..."><br><br>
 				<button onclick="Infix()" class="button-15" role="button">Submit</button><br><br>

@@ -1,5 +1,3 @@
-const postfix = document.querySelector('#postfix');
-
 function evaluatePostfix(exp) {
     let stack = [];
     for (let i = 0; i < exp.length; i++) {
@@ -39,6 +37,6 @@ function evaluatePostfix(exp) {
     return stack.pop();
 }
 function Postfix(){
-	const exp = postfix.value;
+	const exp = document.getElementById('postfix').value;
 	document.getElementById("demo").value = evaluatePostfix(exp);
 }

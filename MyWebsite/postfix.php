@@ -12,8 +12,8 @@
 		<div class="main">
 			<?php include 'calculatoraside.php'; ?>
 			<div class="article">
-				<h1>Postfix to Result</h1><hr>
-				<p>Infix expression is an expression in which the operator is in the middle of operands, like operand operator operand. Postfix expression is an expression in which the operator is after operands, like operand operator. Postfix expressions are easily computed by the system but are not human readable.</p><hr>
+				<h1>Postfix Evaluation Calculator</h1><hr>
+				<p>Our online postfix evaluation calculator allows you to quickly and easily evaluate expressions written in postfix notation (also known as reverse polish notation). Postfix notation is a way of writing mathematical and logical expressions that does not require the use of parentheses to specify the order of operations. Simply enter an expression in postfix notation and the calculator will generate the result of the evaluation. This tool is useful for computer science and programming applications, where postfix notation is often used to evaluate expressions. Try it out now and see how easy it is to evaluate expressions in postfix notation!</p><hr>
 				<h2>Enter postfix expression(Seperated by space):</h2>
 				<input type = "text" id = "postfix" class = "input" placeholder="postfix..."><br><br>
 				<button onclick="Postfix()" class="button-15" role="button">Submit</button><br><br>

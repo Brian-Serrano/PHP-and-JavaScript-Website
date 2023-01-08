@@ -134,72 +134,87 @@ if (isset($_SESSION["id"])){
 					}
 					
 					$url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-					if(strpos($url, "username=success") == true){ 
+					if(strpos($url, "username=success")){ 
 						echo "<p>Username updated successfully</p>";
 					}
-					if(strpos($url, "password=success") == true){ 
+					if(strpos($url, "password=success")){ 
 						echo "<p>Password updated successfully</p>";
 					}
-					if(strpos($url, "error=queryfailed") == true){ 
+					if(strpos($url, "error=queryfailed")){ 
 						echo "<p>An error occured</p>";
 					}
-					if(strpos($url, "age=noinput") == true){ 
+					if(strpos($url, "age=noinput")){ 
 						echo "<p>You did not input</p>";
 					}
-					if(strpos($url, "age=notnumber") == true){ 
+					if(strpos($url, "age=notnumber")){ 
 						echo "<p>Please enter valid age</p>";
 					}
-					if(strpos($url, "age=success") == true){ 
+					if(strpos($url, "age=invalidlength")){ 
+						echo "<p>Enter only 12 to 120</p>";
+					}
+					if(strpos($url, "age=success")){ 
 						echo "<p>Age added successfully</p>";
 					}
-					if(strpos($url, "contact=noinput") == true){ 
+					if(strpos($url, "contact=noinput")){ 
 						echo "<p>You did not input</p>";
 					}
-					if(strpos($url, "contact=success") == true){ 
+					if(strpos($url, "contact=invalidlength")){ 
+						echo "<p>Enter specified length</p>";
+					}
+					if(strpos($url, "contact=success")){ 
 						echo "<p>Contact added successfully</p>";
 					}
-					if(strpos($url, "job=noinput") == true){ 
+					if(strpos($url, "job=noinput")){ 
 						echo "<p>You did not input</p>";
 					}
-					if(strpos($url, "job=success") == true){ 
+					if(strpos($url, "job=invalidlength")){ 
+						echo "<p>Enter specified length</p>";
+					}
+					if(strpos($url, "job=success")){ 
 						echo "<p>Job added successfully</p>";
 					}
-					if(strpos($url, "company=noinput") == true){ 
+					if(strpos($url, "company=noinput")){ 
 						echo "<p>You did not input</p>";
 					}
-					if(strpos($url, "company=success") == true){ 
+					if(strpos($url, "company=invalidlength")){ 
+						echo "<p>Enter specified length</p>";
+					}
+					if(strpos($url, "company=success")){ 
 						echo "<p>Company added successfully</p>";
 					}
-					if(strpos($url, "info=noinput") == true){ 
+					if(strpos($url, "info=noinput")){ 
 						echo "<p>You did not input</p>";
 					}
-					if(strpos($url, "info=success") == true){ 
+					if(strpos($url, "info=invalidlength")){ 
+						echo "<p>Enter specified length</p>";
+					}
+					if(strpos($url, "info=success")){ 
 						echo "<p>Information added successfully</p>";
 					}
 				?>
 				<form action="myaccount.php" method="post" style="display: none;">
 					<p>Set Age</p>
-					<input type="text" name="age" class="input" placeholder="Age here..."><br><br>
+					<input type="number" name="age" class="input" placeholder="Age here..." max="120" min="12" required><br><br>
 					<button class="button-15" role="button" name="setAge" type="submit">Add Age</button><br><br>
 				</form>
 				<form action="myaccount.php" method="post" style="display: none;">
 					<p>Set Contact</p>
-					<input type="text" name="contact" class="input" placeholder="Contact here..."><br><br>
+					<input type="text" name="contact" class="input" placeholder="Contact here..." maxlength="20" minlength="7" required><br><br>
 					<button class="button-15" role="button" name="setContact" type="submit">Add Contact</button><br><br>
 				</form>
 				<form action="myaccount.php" method="post" style="display: none;">
 					<p>Set Job</p>
-					<input type="text" name="job" class="input" placeholder="Job here..."><br><br>
+					<input type="text" name="job" class="input" placeholder="Job here..." maxlength="20" minlength="7" required><br><br>
 					<button class="button-15" role="button" name="setJob" type="submit">Add Job</button><br><br>
 				</form>
 				<form action="myaccount.php" method="post" style="display: none;">
 					<p>Set Company</p>
-					<input type="text" name="company" class="input" placeholder="Company here..."><br><br>
+					<input type="text" name="company" class="input" placeholder="Company here..." maxlength="20" minlength="7" required><br><br>
 					<button class="button-15" role="button" name="setCompany" type="submit">Add Company</button><br><br>
 				</form>
 				<form action="myaccount.php" method="post" style="display: none;">
 					<p>Set Your Info</p>
-					<textarea name="info" placeholder="Your Info here..."></textarea><br><br>
+					<textarea name="info" placeholder="Your Info here..." maxlength="200" minlength="30" required></textarea><br><br>
 					<button class="button-15" role="button" name="setInfo" type="submit">Add Your Info</button><br><br>
 				</form>
             </div>

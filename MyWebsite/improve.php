@@ -21,20 +21,29 @@ if (isset($_SESSION["id"])){
 				<h1>Improve My Website</h1><hr>
                 <form action="improve.php" method="post">
                     <p>Calculator you want me to add</p>
-                    <input type = "text" name = "title" class = "input" placeholder="Title here..." required><br><br>
+                    <input type = "text" name = "title" class = "input" placeholder="Title here..." maxlength="40" minlength="7" required><br><br>
                     <p>Short description about the calculator</p>
-                    <textarea name="desc" class="form-control" rows="5" placeholder="Description here..." required></textarea><br><br>
+                    <textarea name="desc" class="form-control" rows="5" placeholder="Description here..." maxlength="200" minlength="50" required></textarea><br><br>
                     <p>Sample Input</p>
-                    <input type = "text" name = "sinput" class = "input" placeholder="Sample Input here..." required><br><br>
+                    <input type = "text" name = "sinput" class = "input" placeholder="Sample Input here..." maxlength="20" minlength="7" required><br><br>
                     <p>Sample Output</p>
-                    <input type = "text" name = "soutput" class = "input" placeholder="Sample Output here..." required><br><br>
+                    <input type = "text" name = "soutput" class = "input" placeholder="Sample Output here..." maxlength="20" minlength="7" required><br><br>
                     <p>Explanation for the sample</p>
-                    <textarea name="expl" class="form-control" rows="5" placeholder="Explanation here..." required></textarea><br><br>
+                    <textarea name="expl" class="form-control" rows="5" placeholder="Explanation here..." maxlength="200" minlength="50" required></textarea><br><br>
                     <button name="save" class="button-15" role="button">Submit</button><br><br>
                 </form>
                 <?php
                 
                 if(isset($_POST["save"])){
+
+                    if(empty($_POST["title"]) || empty($_POST["desc"]) || empty($_POST["sinput"]) || empty($_POST["soutput"]) || empty($_POST["expl"])){
+                        echo "Please fill in required fields";
+                        exit();
+                    }
+                    if(strlen($_POST["title"]) < 7 || strlen($_POST["title"]) > 40 || strlen($_POST["desc"]) < 50 || strlen($_POST["desc"]) > 200 || strlen($_POST["sinput"]) < 7 || strlen($_POST["sinput"]) > 20 || strlen($_POST["soutput"]) < 7 || strlen($_POST["soutput"]) > 20 || strlen($_POST["expl"]) < 50 || strlen($_POST["expl"]) > 200){
+                        echo "Please enter specified length";
+                        exit();
+                    }
 
                     include "classes/database.php";
 

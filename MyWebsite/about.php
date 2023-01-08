@@ -11,6 +11,11 @@
 	<?php include 'headerandnav.php'; ?>
 		<div class="main">
 			<div class="article">
+				<h1>About my Website</h1><hr>
+				<p>Welcome to our interactive and educational platform! Our website offers a variety of features to enhance your learning and problem-solving skills. Take a quiz to test your knowledge and improve your retention of important concepts. Use our encryption tools to learn about different methods of encoding and decoding messages. Take advantage of our math calculators to solve complex problems and understand mathematical concepts more deeply.</p>
+				<p>If you want to keep track of your progress and save your work, you can create an account by signing up. With an account, you can also update your credentials and delete your account at any time. Don't worry, logging in and out is easy and secure.</p>
+				<p>Explore all that our website has to offer and have fun learning!</p>
+				<hr>
 				<div id="info-scroll">
                 <h1>My Database</h1>
 				<?php

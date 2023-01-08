@@ -13,7 +13,7 @@
 			<?php include 'encryptionaside.php'; ?>
 			<div class="article">
 				<h1>Giovanni Cipher Encryption</h1><hr>
-				<p>Around 1580, Giovanni Battista Argenti suggested that one can also pick a keyletter and begin the keyword UNDER that letter of the plaintext. The Argentis, Giovanni, and his nephew Matteo, come from one of the great cryptology families of the middle ages. After many years of trying, Giovanni finally became the papal secretary of ciphers in Rome in 1950, only to quickly weaken from the frequency necessary trips to Germany and France.</p><hr>
+				<p>Our online Giovanni cipher encryptor allows you to easily encrypt your text using a mixed alphabet and a secret key. Simply enter your plaintext and the key, and the encryptor will generate the encrypted text using the mixed alphabet specified by the key. The Giovanni cipher is not a very secure method of encryption, as it can be easily broken using frequency analysis, but it is a good tool for learning about substitution ciphers and encryption in general. Try it out now and see how easy it is to encrypt your text using a Giovanni cipher!</p><hr>
 				<h2>Enter values on fields:</h2>
 				<input type = "text" id = "cha" class = "input" value="abcdefghijklmnopqrstuvwxyz">
 				<p>Characters:</p>

@@ -1,7 +1,7 @@
 <div class="aside">
 	<p>Check out my other websites</p>
 	<ul>
-		<li>My Games with JS Website</li>
+		<li><a href="../Game Website/index.php">My Games with JS Website</li>
 		<li><a href="index.php">PHP and JavaScript Website(2022)</a></li>
 		<li><a href="../My Website/home.html">My Simple Website with HTML, CSS, JS(2021)</a></li>
 		<li><a href="../CSS/My Website/home.html">My Bad Website with HTML and Internal CSS(2019)</a></li>

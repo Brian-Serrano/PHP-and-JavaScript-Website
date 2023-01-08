@@ -8,17 +8,18 @@ class job extends database {
         $this->job = $job;
     }
     public function noInput(){
-        $result = null;
-        if(empty($this->job)){
-            $result = false;
-        } else {
-            $result = true;
-        }
-        return $result;
+        return empty($this->job);
+    }
+    public function length(){
+        return strlen($this->job) < 7 || strlen($this->job) > 20;
     }
     public function setJob(){
-        if($this->noInput() == false){
+        if($this->noInput()){
             header('location:myaccount.php?job=noinput');
+            exit();
+        }
+        if($this->length()){
+            header('location:myaccount.php?job=invalidlength');
             exit();
         }
         $this->queryJob($this->job);

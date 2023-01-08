@@ -12,8 +12,8 @@
 		<div class="main">
 			<?php include 'calculatoraside.php'; ?>
 			<div class="article">
-				<h1>Hex Color Code Generator</h1><hr>
-				<p>Hex color codes start with a pound sign or hashtag (#) and are followed by six letters and/or numbers. The first two letters/numbers refer to red, the next two refer to green, and the last two refer to blue. The color values are defined in values between 00 and FF (instead of from 0 to 255 in RGB).</p><hr>
+				<h1>RGB to Hex Converter</h1><hr>
+				<p>Our online RGB to Hex color code converter allows you to quickly and easily convert RGB (Red, Green, Blue) colors to their corresponding Hex code values. RGB colors are used in digital media and on the internet to represent a vast array of colors, and the Hex code is a convenient way to specify a particular color in HTML, CSS, and other programming languages. Simply enter the values for Red, Green, and Blue, and the converter will automatically generate the corresponding Hex code. You can also enter a Hex code and the converter will display the corresponding RGB values. This tool is useful for web development, graphic design, and any other situation where you need to specify colors using Hex code values. Try it out now and easily convert between RGB and Hex codes!</p><hr>
 				<h2>Enter RGB Numbers:</h2>
                 <div class="section">
                     <div class="sect">

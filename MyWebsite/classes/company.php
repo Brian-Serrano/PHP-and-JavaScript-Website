@@ -8,17 +8,18 @@ class company extends database {
         $this->company = $company;
     }
     public function noInput(){
-        $result = null;
-        if(empty($this->company)){
-            $result = false;
-        } else {
-            $result = true;
-        }
-        return $result;
+        return empty($this->company);
+    }
+    public function length(){
+        return strlen($this->company) < 7 || strlen($this->company) > 20;
     }
     public function setCompany(){
-        if($this->noInput() == false){
+        if($this->noInput()){
             header('location:myaccount.php?company=noinput');
+            exit();
+        }
+        if($this->length()){
+            header('location:myaccount.php?company=invalidlength');
             exit();
         }
         $this->queryCompany($this->company);

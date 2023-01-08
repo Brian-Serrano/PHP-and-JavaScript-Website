@@ -1,5 +1,3 @@
-const gcf = document.querySelector('#gcf');
-
 function gcd(a, b) {
     if (a == 0)
         return b;
@@ -17,7 +15,7 @@ function findGCF(array) {
     return result;
 }
 function GCF(){
-    var g = gcf.value;
+    var g = document.getElementById('gcf').value;
     var arr = g.split(' ');
     var array = arr.map(Number);
 	document.getElementById("demo").value = findGCF(array);

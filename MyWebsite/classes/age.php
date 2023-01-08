@@ -8,30 +8,25 @@ class age extends database {
         $this->age = $age;
     }
     public function noInput(){
-        $result = null;
-        if(empty($this->age)){
-            $result = false;
-        } else {
-            $result = true;
-        }
-        return $result;
+        return empty($this->age);
     }
     public function isNumber(){
-        $result = null;
-        if(!filter_var($this->age, FILTER_VALIDATE_INT)){
-            $result = false;
-        } else {
-            $result = true;
-        }
-        return $result;
+        return !filter_var($this->age, FILTER_VALIDATE_INT);
+    }
+    public function length(){
+        return $this->age > 120 || $this->age < 12;
     }
     public function setAge(){
-        if($this->noInput() == false){
+        if($this->noInput()){
             header('location:myaccount.php?age=noinput');
             exit();
         }
-        if($this->isNumber() == false){
+        if($this->isNumber()){
             header('location:myaccount.php?age=notnumber');
+            exit();
+        }
+        if($this->length()){
+            header('location:myaccount.php?age=invalidlength');
             exit();
         }
         $this->queryAge($this->age);

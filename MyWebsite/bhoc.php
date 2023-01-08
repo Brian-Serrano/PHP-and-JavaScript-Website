@@ -12,8 +12,8 @@
 		<div class="main">
 			<?php include 'calculatoraside.php'; ?>
 			<div class="article">
-				<h1>Binary, Hexadecimal, Decimal, and Octal Converter</h1><hr>
-				<p>Base 10 (Decimal) — Represent any number using 10 digits [0-9], Base 2 (Binary) — Represent any number using 2 digits [0-1], Base 8 (Octal) — Represent any number using 8 digits [0-7], Base 16(Hexadecimal) — Represent any number using 10 digits and 6 characters [0-9, A, B, C, D, E, F]</p><hr>
+				<h1>Number Systems Calculator</h1><hr>
+				<p>Our online number systems calculator allows you to easily convert numbers between different number systems, including binary, octal, decimal, and hexadecimal. Simply enter a number and select the number system you want to convert from and to, and the calculator will automatically generate the equivalent value in the desired number system. This tool is useful for computer science and programming applications, where different number systems are used to represent data and perform calculations. It is also useful for anyone studying number systems and base conversions. Try it out now and see how easy it is to convert between different number systems!</p><hr>
 				<h2>Decimal:</h2>
 				<input type = "text" id = "dec" class = "input" placeholder="Number here..."><br><br>
 				<button onclick="Dec()" class="button-15" role="button">Submit</button><br><br>

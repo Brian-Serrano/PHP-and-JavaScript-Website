@@ -21,9 +21,9 @@ if (isset($_SESSION["id"])) {
                 <h1>Log In</h1>
                 <form action="login.php" method="post">
                     <p>UserName:</p>
-                    <input type = "text" name = "user" class = "input" placeholder="Username here..."><br>
+                    <input type = "text" name = "user" class = "input" placeholder="Username here..." maxlength="20" minlength="7" required><br>
                     <p>Password:</p>
-                    <input type = "password" name = "pwd" id = "toggle" class = "input" placeholder="Password here..."><br><br><br>
+                    <input type = "password" name = "pwd" id = "toggle" class = "input" placeholder="Password here..." maxlength="20" minlength="7" required><br><br><br>
                     <a onclick="myFunc()" class="hsp">Hide/Show Password</a><br><br><br><br>
                     <button class="button-15" role="button" name="login" type="submit">Log In</button>
                     <p>Don't have an account yet? <a href="signup.php">Sign Up Here</a></p>
@@ -54,22 +54,25 @@ if (isset($_SESSION["id"])) {
                 }
 
 				$url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                if(strpos($url, "login=noinput") == true){ 
+                if(strpos($url, "login=noinput")){ 
                     echo "<p>You did not input</p>";
                 }
-                if(strpos($url, "login=usernotfound") == true){ 
+                if(strpos($url, "login=usernotfound")){ 
                     echo "<p>User not found</p>";
                 }
-                if(strpos($url, "login=wrongpassword") == true){ 
+                if(strpos($url, "login=wrongpassword")){ 
                     echo "<p>Wrong password</p>";
                 }
-                if(strpos($url, "login=queryfailed") == true){ 
+                if(strpos($url, "login=queryfailed")){ 
                     echo "<p>An error occured</p>";
                 }
-                if(strpos($url, "login=youdidntlogin") == true){ 
+                if(strpos($url, "login=invalidlength")){ 
+                    echo "<p>Enter specified length</p>";
+                }
+                if(strpos($url, "login=youdidntlogin")){ 
                     echo "<p>Login first to access</p>";
                 }
-                if(strpos($url, "error=queryfailed") == true){ 
+                if(strpos($url, "error=queryfailed")){ 
                     echo "<p>An error occured</p>";
                 }
 				?>

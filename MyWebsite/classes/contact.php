@@ -8,17 +8,18 @@ class contact extends database {
         $this->contact = $contact;
     }
     public function noInput(){
-        $result = null;
-        if(empty($this->contact)){
-            $result = false;
-        } else {
-            $result = true;
-        }
-        return $result;
+        return empty($this->contact);
+    }
+    public function length(){
+        return strlen($this->contact) < 7 || strlen($this->contact) > 20;
     }
     public function setContact(){
-        if($this->noInput() == false){
+        if($this->noInput()){
             header('location:myaccount.php?contact=noinput');
+            exit();
+        }
+        if($this->length()){
+            header('location:myaccount.php?contact=invalidlength');
             exit();
         }
         $this->queryContact($this->contact);

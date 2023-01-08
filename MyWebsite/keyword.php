@@ -13,7 +13,7 @@
 			<?php include 'encryptionaside.php'; ?>
 			<div class="article">
 				<h1>Keyword Cipher Encryption</h1><hr>
-				<p>To use this method for constructing the ciphertext alphabet, pick a keyword and write it down while ignoring the repeated letters. Follow it with the letters of the alphabet that have not yet been used. For example, find the alphabet pairs for the keyword COLLEGE. Crossing out the letters that are making their second appearance leaves COLEG. To encipher, use the pair of alphabets.</p><hr>
+				<p>Our online keyword cipher encryptor allows you to easily encrypt your text using the keyword cipher method. The keyword cipher is a simple substitution cipher that replaces each letter of the plaintext with a letter that is a fixed number of positions down the alphabet, based on the corresponding letter of a keyword. Simply enter your plaintext and the keyword, and the encryptor will generate the encrypted text. The keyword cipher is not a very secure method of encryption, as it can be easily broken using frequency analysis, but it is a good tool for learning about substitution ciphers and encryption in general. Try it out now and see how easy it is to encrypt your text using the keyword cipher method!</p><hr>
 				<h2>Enter values on fields:</h2>
 				<input type = "text" id = "cha" class = "input" value="abcdefghijklmnopqrstuvwxyz">
 				<p>Characters:</p>

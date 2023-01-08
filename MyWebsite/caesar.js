@@ -1,7 +1,3 @@
-const cha = document.querySelector('#cha');
-const shift = document.querySelector('#shift');
-const plain = document.querySelector('#plain');
-
 function findCaesar(cha1, shift1, plain1){
     const cha3 = cha1.toUpperCase();
     const cha2 = cha3.split('');
@@ -26,8 +22,8 @@ function findCaesar(cha1, shift1, plain1){
 }
 
 function Caesar(){
-    const cha1 = cha.value;
-    const shift1 = parseInt(shift.value);
-    const plain1 = plain.value;
+    const cha1 = document.getElementById('cha').value;
+    const shift1 = parseInt(document.getElementById('shift').value);
+    const plain1 = document.getElementById('plain').value;
 	document.getElementById("demo").value = findCaesar(cha1, shift1, plain1);
 }

@@ -10,13 +10,8 @@ class checkSignup extends database {
             header('location:signup.php?signup=queryfailed');
             exit();
         }
-        $resultCheck = null;
-        if (mysqli_num_rows($query_run) > 0) {
-            $resultCheck = false;
-        } else {
-            $resultCheck = true;
-        }
-        return $resultCheck;
+        $resultCheck = mysqli_num_rows($query_run) > 0;
+        return !$resultCheck;
     }
     public function setUser($user, $email, $pwd){
         $hashPwd = password_hash($pwd, PASSWORD_DEFAULT);

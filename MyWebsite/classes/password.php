@@ -10,49 +10,38 @@ class password extends database {
         $this->NewPwd = $NewPwd;
     }
     public function noInput(){
-        $result = null;
-        if(empty($this->ConPwd) || empty($this->NewPwd)){
-            $result = false;
-        } else {
-            $result = true;
-        }
-        return $result;
+        return empty($this->ConPwd) || empty($this->NewPwd);
     }
     public function pwdValidation(){
         $uppercase = preg_match('@[A-Z]@', $this->NewPwd);
         $lowercase = preg_match('@[a-z]@', $this->NewPwd);
         $number = preg_match('@[0-9]@', $this->NewPwd);
         $specialChars = preg_match('@[^\w]@', $this->NewPwd);
-        $result = null;
 
-        if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($this->NewPwd) < 7 || strlen($this->NewPwd) > 20) {
-            $result = false;
-        }else{
-            $result = true;
-        }
-        return $result;
+        return !$uppercase || !$lowercase || !$number || !$specialChars;
     }
     public function pwdMatch(){
-        $result = null;
-        if(!password_verify($this->ConPwd, $_SESSION['pwd'])){
-            $result = false;
-        } else {
-            $result = true;
-        }
-        return $result;
+        return !password_verify($this->ConPwd, $_SESSION['pwd']);
+    }
+    public function length(){
+        return strlen($this->ConPwd) < 7 || strlen($this->ConPwd) > 20 || strlen($this->NewPwd) < 7 || strlen($this->NewPwd) > 20;
     }
     public function updatePwd(){
 
-        if($this->noInput() == false){
+        if($this->noInput()){
             header('location:updatepassword.php?update=noinput');
             exit();
         }
-        if($this->pwdValidation() == false){
+        if($this->pwdValidation()){
             header('location:updatepassword.php?update=invalidpassword');
             exit();
         }
-        if($this->pwdMatch() == false){
+        if($this->pwdMatch()){
             header('location:updatepassword.php?update=passworddoesntmatch');
+            exit();
+        }
+        if($this->length()){
+            header('location:updatepassword.php?update=invalidlength');
             exit();
         }
         $this->queryPwd($this->ConPwd, $this->NewPwd);

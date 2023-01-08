@@ -13,7 +13,7 @@
 			<?php include 'calculatoraside.php'; ?>
 			<div class="article">
 				<h1>Gap between two dates calculator</h1><hr>
-				<p>This days between dates calculator will help you calculate how many days are between two given dates. For instance, if you are wondering how many days have passed since an event took place or the number of days until an event takes place, this how many days are there between two dates calculator is just what you need. As a bonus, you can express the results in seconds, minutes, hours, days, weeks, months, or years.</p><hr>
+				<p>Our online gap between two dates calculator allows you to quickly and easily determine the number of days, months, and years between two specific dates. Simply enter the start and end dates, and the calculator will automatically calculate the duration of the time period in days, months, and years. This tool is useful for calculating the age of someone, determining how much time has passed since an event occurred, or planning the duration of a project. The calculator takes into account the different lengths of months and leap years, so you can trust that the results are accurate. Try it out now and see how much time has passed between any two dates!</p><hr>
 				<h2>Enter two dates:</h2>
 				<input type = "date" id = "date1" class = "input">
 				<p>Start Date:</p>
