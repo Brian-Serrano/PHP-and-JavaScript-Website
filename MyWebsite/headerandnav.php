@@ -1,5 +1,5 @@
 <div class="header" id="myHeader">
-	<p>PHP and JS Website</p>
+	<p>PHP and JS</p>
 	<a href="javascript:void(0);" class="icon" onclick="Header()">
 		<i class="fa fa-bars"></i>
 	</a>

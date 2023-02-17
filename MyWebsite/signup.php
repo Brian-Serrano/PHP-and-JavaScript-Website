@@ -21,17 +21,13 @@ if (isset($_SESSION["id"])) {
                 <h1>Sign Up</h1>
                 <form action="signup.php" method="post">
                     <p>UserName:</p>
-                    <input type = "text" name = "user" class = "input" placeholder="Username here..." maxlength="20" minlength="7" required><br>
-                    <h5>Username must be at least 7 characters and not greater than 20 characters</h5><br>
+                    <input type = "text" name = "user" class = "input" placeholder="Username here..." maxlength="20" minlength="7" title="Username must be at least 7 characters and not greater than 20 characters" required><br>
                     <p>Email Address:</p>
-                    <input type = "email" name = "email" class = "input" placeholder="Email address here..." maxlength="40" minlength="10" required><br>
-                    <h5>Email should have valid format</h5><br>
+                    <input type = "email" name = "email" class = "input" placeholder="Email address here..." maxlength="40" minlength="10" title="Email should have valid format" required><br>
                     <p>Password:</p>
-                    <input type = "password" name = "pwd" id = "toggle1" class = "input" placeholder="Password here..." maxlength="20" minlength="7" required><br>
-                    <h5>Password must be at least 7 characters and not greater than 20 characters<br>and must include at least one uppercase letter, number and special character</h5><br>
+                    <input type = "password" name = "pwd" id = "toggle1" class = "input" placeholder="Password here..." maxlength="20" minlength="7" title="Password must be at least 7 characters and not greater than 20 characters and must include at least one uppercase letter, number and special character" required><br>
                     <p>Confirm Password:</p>
-                    <input type = "password" name = "confPwd" id = "toggle2" class = "input" placeholder="Confirm password here..." maxlength="20" minlength="7" required><br>
-                    <h5>Confirm password should be the same with password</h5><br><br>
+                    <input type = "password" name = "confPwd" id = "toggle2" class = "input" placeholder="Confirm password here..." maxlength="20" minlength="7" title="Confirm password should be the same with password" required><br><br><br>
                     <a onclick="myFunc()" class="hsp">Hide/Show Password</a><br><br><br><br>
                     <button class="button-15" role="button" name="signup" type="submit">Sign Up</button>
                 </form>
@@ -50,50 +46,50 @@ if (isset($_SESSION["id"])) {
                     }
                 </script>
                 <?php
-    if (isset($_POST['signup'])) {
+                    if (isset($_POST['signup'])) {
 
-        $user = $_POST['user'];
-        $email = $_POST['email'];
-        $pwd = $_POST['pwd'];
-        $confPwd = $_POST['confPwd'];
+                        $user = $_POST['user'];
+                        $email = $_POST['email'];
+                        $pwd = $_POST['pwd'];
+                        $confPwd = $_POST['confPwd'];
 
-        include "classes/database.php";
-        include "classes/checkSignup.php";
-        include "classes/signupfunc.php";
+                        include "classes/database.php";
+                        include "classes/checkSignup.php";
+                        include "classes/signupfunc.php";
 
-        $signup = new signupfunc($user, $email, $pwd, $confPwd);
-        $signup->signupUser();
-        header('location:index.php');
-    }
+                        $signup = new signupfunc($user, $email, $pwd, $confPwd);
+                        $signup->signupUser();
+                        header('location:index.php');
+                    }
 
-    $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    if (strpos($url, "signup=noinput")) {
-        echo "<p>You did not input</p>";
-    }
-    if (strpos($url, "signup=user")) {
-        echo "<p>Username Validation Failed</p>";
-    }
-    if (strpos($url, "signup=pwdvalidation")) {
-        echo "<p>Password Validation Failed</p>";
-    }
-    if (strpos($url, "signup=email")) {
-        echo "<p>Invalid email address</p>";
-    }
-    if (strpos($url, "signup=password")) {
-        echo "<p>Passwords don't match</p>";
-    }
-    if (strpos($url, "signup=taken")) {
-        echo "<p>Username or Email Already exists</p>";
-    }
-    if(strpos($url, "signup=invalidlength")){ 
-        echo "<p>Enter specified length</p>";
-    }
-    if (strpos($url, "signup=queryfailed")) {
-        echo "<p>An error occured</p>";
-    }
-    if (strpos($url, "error=queryfailed")) {
-        echo "<p>An error occured</p>";
-    }
+                    $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                    if (strpos($url, "signup=noinput")) {
+                        echo "<p>You did not input</p>";
+                    }
+                    if (strpos($url, "signup=user")) {
+                        echo "<p>Username Validation Failed</p>";
+                    }
+                    if (strpos($url, "signup=pwdvalidation")) {
+                        echo "<p>Password Validation Failed</p>";
+                    }
+                    if (strpos($url, "signup=email")) {
+                        echo "<p>Invalid email address</p>";
+                    }
+                    if (strpos($url, "signup=password")) {
+                        echo "<p>Passwords don't match</p>";
+                    }
+                    if (strpos($url, "signup=taken")) {
+                        echo "<p>Username or Email Already exists</p>";
+                    }
+                    if(strpos($url, "signup=invalidlength")){ 
+                        echo "<p>Enter specified length</p>";
+                    }
+                    if (strpos($url, "signup=queryfailed")) {
+                        echo "<p>An error occured</p>";
+                    }
+                    if (strpos($url, "error=queryfailed")) {
+                        echo "<p>An error occured</p>";
+                    }
                 ?>
                 <br><br>
             </div>

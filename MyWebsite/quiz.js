@@ -7,7 +7,6 @@ var div1 = document.getElementById("div1");
 var error = document.getElementById("error");
 var inform = document.getElementById("inform");
 
-//fetch API then create the quiz
 function fetchQuiz(){
     fetch(`https://the-trivia-api.com/api/questions?limit=20`)
         .then((response) => response.json())
@@ -16,7 +15,6 @@ function fetchQuiz(){
             let i = 0;
             var score = 0;
             
-            //create the questions and choices
             function create(){
                 question.innerHTML = data[i].question;
                 const array = [data[i].correctAnswer, data[i].incorrectAnswers[0], data[i].incorrectAnswers[1], data[i].incorrectAnswers[2]];
@@ -37,7 +35,6 @@ function fetchQuiz(){
                 }
             }
 
-            //remove the questions and choices
             function remove(){
                 if(div1.hasChildNodes()) {
                     div1.removeChild(div1.children[0]);
@@ -49,7 +46,6 @@ function fetchQuiz(){
                 }
             }
 
-            //submit answer button
             submit.addEventListener("click", () => {
                 if(div1.hasChildNodes()) {
                     const answer = div1.children;
@@ -67,7 +63,6 @@ function fetchQuiz(){
                 next.style.display = "inline";
             });
 
-            //next question button
             next.addEventListener("click", () => {
                 i++;
                 if (i>=20){
@@ -88,7 +83,6 @@ function fetchQuiz(){
                 }
             });
 
-            //start quiz button
             start.addEventListener("click", () => {
                 submit.style.display = "inline";
                 question.style.display = "block";
@@ -101,7 +95,6 @@ function fetchQuiz(){
                 create();
             });
 
-            //save score button
             save.addEventListener("click", () => {
                 var xmlhttp = new XMLHttpRequest();
                 var param = "score="+score;
@@ -123,7 +116,6 @@ function fetchQuiz(){
 
 fetchQuiz();
 
-//drag and drop api
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -139,16 +131,15 @@ function drop(ev) {
     ev.target.appendChild(document.getElementById(data));
 }
 
-//shuffle the choices
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
 
     while (currentIndex != 0) {
 
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
 
-      [array[currentIndex], array[randomIndex]] = [
+        [array[currentIndex], array[randomIndex]] = [
             array[randomIndex], array[currentIndex]];
     }
   

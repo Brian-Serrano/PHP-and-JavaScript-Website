@@ -39,7 +39,11 @@ body {
 	margin: auto;
 	font-weight: bold;
 	text-align: left;
-	text-indent: 30px;
+	text-indent: 20px;
+	white-space: nowrap;
+}
+.header p:after {
+	content: " Website";
 }
 .header p:before {
 	background-image: url('img/php.png');
@@ -85,7 +89,8 @@ body {
 	font-size: 25px;
 	margin: auto;
 	text-align: left;
-	text-indent: 30px;
+	text-indent: 20px;
+	white-space: nowrap;
 }
 .nav p:before {
 	background-image: url('img/calculator.png');
@@ -327,6 +332,7 @@ img {
 	border: 10px orange solid;
 }
 .panel {
+	width: 100%;
 	display: grid;
   	grid-template-columns: repeat(2, 1fr);
 	padding: 10px;
@@ -399,5 +405,21 @@ img {
 	}
 	.nav.responsive .subNav a {
 		display: block;
+	}
+	.article .section .sect input {
+		width: 50%;
+	}
+	.aside {
+		max-height: 200px;
+		height: 200px;
+		overflow: auto;
+	}
+}
+@media (max-width: 600px) {
+	.header p:after {
+		content: "";
+	}
+	.panel {
+		grid-template-columns: 1fr;
 	}
 }
