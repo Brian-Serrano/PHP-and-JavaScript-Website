@@ -1,35 +1,26 @@
-function findKeyword(cha1, key1, plain1){
-    const cha3 = cha1.toUpperCase();
-    const cha2 = cha3.split('');
-    const plain3 = plain1.toUpperCase();
-    const plain2 = plain3.split('');
-    const key3 = key1.toUpperCase();
-    const key2 = Array.from(new Set(key3.split(''))).toString();
-    var res = [];
-    var toIndex = 0;
-    for(let i = 0; i < key2.length; i++){
-        for(let j = 0; j < cha2.length; j++){
-            if(key2[i] === cha2[j]){
-                const fromIndex = j;
-                const element = cha2.splice(fromIndex, 1)[0];
-                cha2.splice(toIndex, 0, element);
-                toIndex++;
-            }
+function findKeyword(cha1, key1, plain1) {
+    const cha2 = cha1.toUpperCase().split('');
+    const plain2 = plain1.toUpperCase().split('');
+    const key2 = Array.from(new Set(key1.toUpperCase().split(''))).toString();
+    let res = '';
+    let toIndex = 0;
+    for (let i = 0; i < key2.length; i++) {
+        const fromIndex = cha2.indexOf(key2[i]);
+        if (fromIndex !== -1) {
+            cha2.splice(toIndex, 0, cha2.splice(fromIndex, 1)[0]);
+            toIndex++;
         }
     }
-    const cha4 = cha3.split('');
-    for(let k = 0; k < plain2.length; k++){
-        for(let l = 0; l < cha4.length; l++){
-            if(plain2[k] === cha4[l]){
-                res.push(cha2[l]);
-            }
-        }
-        if (cha2.indexOf(plain2[k]) === -1){
-            res.push(plain2[k]);
+    for (let i = 0; i < plain2.length; i++) {
+        const index = cha1.toUpperCase().indexOf(plain2[i]);
+        if (index === -1) {
+            res += plain2[i];
+        } else {
+            res += cha2[index];
         }
     }
-    return res.join('');
-}
+    return res;
+  }
 
 function Keyword(){
     const cha1 = document.getElementById('cha').value;

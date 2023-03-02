@@ -21,7 +21,6 @@
 				?>
 				<hr>
 				<h2><a href="gbtd.php">Gap between two dates calculator</a></h2>
-                <h2><a href="dotw.php">Day of the week calculator</a></h2>
 				<h2><a href="permutation.php">Permutation calculator</a></h2>
                 <h2><a href="combination.php">Combination calculator</a></h2>
                 <h2><a href="hex.php">Hex Color Code Generator</a></h2>

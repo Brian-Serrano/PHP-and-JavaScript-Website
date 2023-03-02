@@ -1,14 +1,7 @@
 function findTransposition(plain1){
-    const plain2 = plain1.split(' ');
-    const plain4 = plain2.join('').toUpperCase();
-    const plain3 = plain4.split('');
-    var res = [];
-    for (let i = 0; i < plain3.length; i+=2){
-        res.push(plain3[i]);
-    }
-    for (let j = 1; j < plain3.length; j+=2){
-        res.push(plain3[j]);
-    }
+    const plain3 = plain1.split(' ').join('').toUpperCase().split('');
+    var res = plain3.filter((_, i) => i % 2 === 0)
+                    .concat(plain3.filter((_, i) => i % 2 === 1));
     return res.join('');
 }
 

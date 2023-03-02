@@ -1,18 +1,9 @@
 function gcd(a, b) {
-    if (a == 0)
-        return b;
-    return gcd(b % a, a);
+    return a === 0 ? b : gcd(b % a, a);
 }
+  
 function findGCF(array) {
-    let result = array[0];
-    for (let i = 1; i < array.length; i++) {
-        result = gcd(array[i], result);
-
-        if (result == 1) {
-            return 1;
-        }
-    }
-    return result;
+    return array.reduce(gcd);
 }
 function GCF(){
     var g = document.getElementById('gcf').value;
